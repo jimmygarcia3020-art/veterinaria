@@ -15,7 +15,6 @@ public class Mascota {
     @Column(nullable = false)
     private String especie;// Perro ,Gato ,Aves
 
-
     private String raza;
 
     @Column(nullable = false)
