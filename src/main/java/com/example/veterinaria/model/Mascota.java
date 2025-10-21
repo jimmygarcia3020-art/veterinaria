@@ -3,7 +3,7 @@ package com.example.veterinaria.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name ="mascotas")
+@Table(name = "mascota")
 public class Mascota {
 
     @Id
@@ -26,7 +26,7 @@ public class Mascota {
     }
 
     //Constrcutor con parametros
-    public Mascota(String nombre, String especie, String raza, Integer edad) {
+    public Mascota(Integer id,String nombre, String especie, String raza, Integer edad) {
         this.id = id;
         this.nombre = nombre;
         this.especie = especie;
