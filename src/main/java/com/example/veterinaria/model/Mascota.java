@@ -2,14 +2,23 @@ package com.example.veterinaria.model;
 
 import jakarta.persistence.*;
 
+@Entity
+@Table(name ="mascotas")
 public class Mascota {
 
+    @Id
+    private Integer id;
+
+    @Column(nullable = false)
     private String nombre;
 
+    @Column(nullable = false)
     private String especie;// Perro ,Gato ,Aves
+
 
     private String raza;
 
+    @Column(nullable = false)
     private Integer edad;
 
     //Constructor vacio
@@ -19,10 +28,19 @@ public class Mascota {
 
     //Constrcutor con parametros
     public Mascota(String nombre, String especie, String raza, Integer edad) {
+        this.id = id;
         this.nombre = nombre;
         this.especie = especie;
         this.raza = raza;
         this.edad = edad;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNombre() {
