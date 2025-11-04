@@ -31,16 +31,16 @@ public class MascotaController {
     public ResponseEntity<?>
     crearMascota(@RequestBody Mascota mascota){
         if(mascota.getNombre() == null || mascota.getNombre().trim().isEmpty()){
-            return ResponseEntity.badRequest().body("El campo es obligatorio");
+            return ResponseEntity.badRequest().body("El campo Nombre es obligatorio");
         }
         if(mascota.getEdad() == null){
-            return ResponseEntity.badRequest().body("El campo es obligatorio");
+            return ResponseEntity.badRequest().body("El campo Edad es obligatorio");
         }
         if(mascota.getEspecie() == null || mascota.getEspecie().trim().isEmpty()){
-            return ResponseEntity.badRequest().body("El campo es obligatorio");
+            return ResponseEntity.badRequest().body("El campo Especie es obligatorio");
         }
         if(mascota.getPeso() == null){
-            return ResponseEntity.badRequest().body("El campo es obligatorio");
+            return ResponseEntity.badRequest().body("El campo Peso es obligatorio");
         }
         return ResponseEntity.ok(mascotaService.crearMascota(mascota));
     }

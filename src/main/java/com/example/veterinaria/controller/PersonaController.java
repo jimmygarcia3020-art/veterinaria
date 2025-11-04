@@ -31,19 +31,19 @@ public class PersonaController {
     public ResponseEntity<?>
     crearMascota(@RequestBody Persona persona){
         if(persona.getNombres() == null || persona.getNombres().trim().isEmpty()){
-            return ResponseEntity.badRequest().body("El campo es obligatorio");
+            return ResponseEntity.badRequest().body("El campo Nombres es obligatorio");
         }
         if(persona.getApellidos() == null || persona.getApellidos().trim().isEmpty()){
-            return ResponseEntity.badRequest().body("El campo es obligatorio");
+            return ResponseEntity.badRequest().body("El campo Apellidos es obligatorio");
         }
         if(persona.getDni() == null){
-            return ResponseEntity.badRequest().body("El campo es obligatorio");
+            return ResponseEntity.badRequest().body("El campo Dni es obligatorio");
         }
         if(persona.getEmail() == null || persona.getEmail().trim().isEmpty()){
-            return ResponseEntity.badRequest().body("El campo es obligatorio");
+            return ResponseEntity.badRequest().body("El campo Email es obligatorio");
         }
         if(persona.getTelefono() == null){
-            return ResponseEntity.badRequest().body("El campo es obligatorio");
+            return ResponseEntity.badRequest().body("El campo Telefono es obligatorio");
         }
         return ResponseEntity.ok(personaService.crearPersona(persona));
     }
