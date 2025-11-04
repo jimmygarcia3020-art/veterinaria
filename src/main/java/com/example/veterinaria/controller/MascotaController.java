@@ -39,6 +39,9 @@ public class MascotaController {
         if(mascota.getEspecie() == null || mascota.getEspecie().trim().isEmpty()){
             return ResponseEntity.badRequest().body("El campo es obligatorio");
         }
+        if(mascota.getPeso() == 0){
+            return ResponseEntity.badRequest().body("El campo es obligatorio");
+        }
         return ResponseEntity.ok(mascotaService.crearMascota(mascota));
     }
 }
