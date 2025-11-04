@@ -21,7 +21,7 @@ public class Mascota {
     private Integer edad;
 
     @Column(nullable = false)
-    private double peso;
+    private Double peso;
 
     //Constructor vacio
     public Mascota(){
@@ -29,7 +29,7 @@ public class Mascota {
     }
 
     //Constrcutor con parametros
-    public Mascota(Integer id,String nombre, String especie, String raza, Integer edad, double peso) {
+    public Mascota(Integer id,String nombre, String especie, String raza, Integer edad, Double peso) {
         this.id = id;
         this.nombre = nombre;
         this.especie = especie;
@@ -78,11 +78,11 @@ public class Mascota {
         this.edad = edad;
     }
 
-    public double getPeso() {
+    public Double getPeso() {
         return peso;
     }
 
-    public void setPeso(double peso) {
+    public void setPeso(Double peso) {
         this.peso = peso;
     }
 }
